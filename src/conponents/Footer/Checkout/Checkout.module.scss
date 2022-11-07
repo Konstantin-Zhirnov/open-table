@@ -1,0 +1,17 @@
+@import '../../../styles/vars';
+
+.container button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: $white;
+  transition: background-color 0.4s;
+}
+
+.container button:hover {
+  background-color: $hover-background;
+  box-shadow: $shadow-small;
+  transition: background-color 0.4s;
+}

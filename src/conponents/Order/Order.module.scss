@@ -1,0 +1,15 @@
+@import '../../styles/vars';
+
+.container {
+  width: 50%;
+  background-color: $active-button;
+
+  h2 {
+    padding: 12px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}

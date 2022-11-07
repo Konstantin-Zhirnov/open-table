@@ -1,0 +1,15 @@
+@import './styles/vars';
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    display: flex;
+    flex: 1;
+    box-shadow: $shadow-small;
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../../styles/vars';
+
+.container button {
+  width: 100%;
+  background-color: $white;
+  border: 0;
+  padding: 6px 6px 6px 12px;
+  border-bottom: 1px solid $border-color;
+  text-align: left;
+  cursor: pointer;
+
+  span {
+    padding-right: 10px;
+  }
+}
+
+.container:first-child {
+  button {
+    border-top: 1px solid $border-color;
+  }
+}
+
+.container button:hover {
+  background-color: $active-button
+}

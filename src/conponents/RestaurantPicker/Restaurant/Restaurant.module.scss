@@ -1,0 +1,20 @@
+@import '../../../styles/vars';
+
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0;
+  box-shadow: $shadow-small;
+  cursor: pointer;
+  background-color: $white;
+}
+
+.active, .container:hover {
+  background-color: $active-button;
+}
+
+.active {
+  font-weight: 600;
+}

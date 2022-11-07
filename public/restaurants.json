@@ -1,0 +1,36 @@
+{
+  "restaurants": [
+    {
+      "name": "Cluckin' Bell",
+      "access": "access:rest:cluckinbell",
+      "id": 1,
+      "menu": [
+        { "name": "Cluckin' Good Sandwhich", "price": 10.5, "id": 1 },
+        { "name": "Clucky Wings", "price": 7.5, "id": 2 },
+        { "name": "Nuggets of Joy", "price": 9.0, "id": 3 },
+        { "name": "Triple Fried Fries", "price": 3.0, "id": 4 }
+      ]
+    },
+    {
+      "name": "Burger Shot",
+      "access": "access:rest:burgershot",
+      "id": 2,
+      "menu": [
+        { "name": "Double Triple Burger", "price": 11.5, "id": 4 },
+        { "name": "Bacon Wrapped Bacon", "price": 12.0, "id": 5 },
+        { "name": "Strawberry Cream Shake", "price": 12.0, "id": 6 },
+        { "name": "Waffles", "price": 7.5, "id": 7 },
+        { "name": "Burger Tacos", "price": 12.5, "id": 8 }
+      ]
+    },
+    {
+      "name": "Insider's Only",
+      "access": "access:rest:insidersonly",
+      "id": 3,
+      "menu": [
+        { "name": "Woudln't You Like To Know", "price": 1000, "id": 9 },
+        { "name": "Too Good For You", "price": 120.0, "id": 10 }
+      ]
+    }
+  ]
+}

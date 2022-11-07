@@ -1,0 +1,9 @@
+{
+  "name": "Robert Mercado",
+  "permissionList": [
+    "external:consumer:user",
+    "access:rest:cluckinbell",
+    "access:rest:burgershot"
+  ],
+  "location": "funkytown, USA"
+}

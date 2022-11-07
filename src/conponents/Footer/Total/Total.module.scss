@@ -1,0 +1,11 @@
+@import '../../../styles/vars';
+
+.container {
+  padding: 12px;
+  color: $white;
+
+  span {
+    color: initial;
+    margin-left: 4px;
+  }
+}
