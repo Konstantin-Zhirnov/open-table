@@ -8,6 +8,7 @@
   left: 0;
   background-color: rgba(0, 0, 0, .3);
   display: flex;
+  z-index: 2;
   
   .content {
     width: 200px;
@@ -29,6 +30,8 @@
       border-radius: 50%;
       border: 0;
       cursor: pointer;
+      max-width: 24px;
+      max-height: 24px;
       width: 24px;
       height: 24px;
       font-size: 1.4rem;
