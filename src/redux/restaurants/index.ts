@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { fetchGetRestaurants } from "./asyncActions";
-import { RestaurantsStateType, MenuType } from "../../types/restaurants.type";
+import {RestaurantsStateType, MenuType, ShortInfoType} from "../../types/restaurants.type";
 import { RootState } from "../store";
 
 const initialState: RestaurantsStateType = {
-  names: [],
+    shortInfo: [],
   menus: [],
   currentRestaurant: 0,
   isRestaurantsLoading: false
@@ -27,13 +27,13 @@ export const restaurants = createSlice({
     builder
       .addCase(fetchGetRestaurants.pending, pendingRestaurants)
       .addCase(fetchGetRestaurants.fulfilled, (state, action) => {
-        const names: string[] = [];
+        const shortInfo: ShortInfoType[] = [];
         const menus: MenuType[][] = [];
         action.payload?.restaurants.forEach((item) => {
-          names.push(item.name);
+            shortInfo.push({name: item.name, img: item.img});
           menus.push(item.menu);
         });
-        state.names = names;
+        state.shortInfo = shortInfo;
         state.menus = menus;
         state.isRestaurantsLoading = false;
       })
@@ -45,8 +45,8 @@ export const restaurants = createSlice({
 
 export const { setCurrentRestaurant } = restaurants.actions;
 
-export const getRestaurantsNames = (state: RootState): string[] =>
-  state.restaurants.names;
+export const getRestaurantsShortInfo = (state: RootState): ShortInfoType[] =>
+  state.restaurants.shortInfo;
 export const getRestaurantsMenus = (state: RootState): MenuType[][] =>
   state.restaurants.menus;
 export const getCurrentRestaurant = (state: RootState): number =>

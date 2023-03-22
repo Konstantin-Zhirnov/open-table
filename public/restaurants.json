@@ -2,6 +2,7 @@
   "restaurants": [
     {
       "name": "Cluckin' Bell",
+      "img": "/restaurant-1.jpg",
       "access": "access:rest:cluckinbell",
       "id": 1,
       "menu": [
@@ -13,6 +14,7 @@
     },
     {
       "name": "Burger Shot",
+      "img": "/restaurant-2.jpg",
       "access": "access:rest:burgershot",
       "id": 2,
       "menu": [
@@ -25,6 +27,7 @@
     },
     {
       "name": "Insider's Only",
+      "img": "/restaurant-3.jpg",
       "access": "access:rest:insidersonly",
       "id": 3,
       "menu": [

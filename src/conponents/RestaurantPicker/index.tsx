@@ -1,19 +1,19 @@
 import React from "react";
 
 import { useAppSelector } from "../../redux/hooks";
-import { getRestaurantsNames } from "../../redux/restaurants";
+import {getRestaurantsShortInfo} from "../../redux/restaurants";
 
 import Restaurant from "./Restaurant";
 
 import styles from "./RestaurantPicker.module.scss";
 
 const RestaurantPicker: React.FC = React.memo(() => {
-  const restaurantsNames = useAppSelector(getRestaurantsNames);
+  const shortInfo = useAppSelector(getRestaurantsShortInfo);
 
   return (
     <div className={styles.container}>
-      {restaurantsNames &&
-        restaurantsNames.map((restaurant, index) => (
+      {Boolean(shortInfo.length) &&
+          shortInfo.map((restaurant, index) => (
           <Restaurant key={index} index={index} restaurant={restaurant} />
         ))}
     </div>

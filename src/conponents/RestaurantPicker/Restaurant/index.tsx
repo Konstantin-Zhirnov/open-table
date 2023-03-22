@@ -5,12 +5,14 @@ import {
   setCurrentRestaurant,
   getCurrentRestaurant
 } from "../../../redux/restaurants";
+import {ShortInfoType} from "../../../types/restaurants.type";
 
 import styles from "./Restaurant.module.scss";
 
+
 interface IProps {
   index: number;
-  restaurant: string;
+  restaurant: ShortInfoType;
 }
 
 const Restaurant: React.FC<IProps> = React.memo(({ index, restaurant }) => {
@@ -29,8 +31,9 @@ const Restaurant: React.FC<IProps> = React.memo(({ index, restaurant }) => {
   };
 
   return (
-    <button className={getClassName()} onClick={handleClick}>
-      {restaurant}
+    <button className={getClassName()} onClick={handleClick} >
+      <span className={styles.title}>{restaurant.name}</span>
+      <img src={restaurant.img} alt={restaurant.name}/>
     </button>
   );
 });
